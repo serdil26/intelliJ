@@ -50,6 +50,20 @@ driver.findElement(By.xpath("//*[@id=\"tree-node\"]/ol/li/ol/li[2]/ol/li[2]/ol/l
         driver.get("https://demoqa.com/radio-button");
         driver.findElement(By.xpath("//label[@for='yesRadio']")).click();
     }
+    @Test (priority = 7)
+    public void webTablesTest() throws InterruptedException {
+        driver.get("https://demoqa.com/webtables");
+        driver.findElement(By.id("addNewRecordButton")).click();
+        driver.findElement(By.xpath("//input[@id='firstName']")).sendKeys("Nuriye"+Keys.ENTER);
+        driver.findElement(By.xpath("//input[@id='lastName']")).sendKeys("Sutlu"+Keys.ENTER);
+        driver.findElement(By.xpath("//input[@id='userEmail']")).sendKeys("sutlunuriye@gmail.com"+Keys.ENTER);
+    driver.findElement(By.xpath("//input[@id='age']")).sendKeys("41"+Keys.ENTER);
+driver.findElement(By.xpath("//input[@id='salary']")).sendKeys("3000"+Keys.ENTER);
+driver.findElement(By.xpath("//input[@id='department']")).sendKeys("kitchen"+Keys.ENTER);
+WebElement save= driver.findElement(By.xpath("//button[@id='submit']"));
+save.submit();
+Thread.sleep(3000);
+    }
     @AfterClass
     public void end() throws InterruptedException {
 
