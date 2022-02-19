@@ -28,6 +28,7 @@ public class C01_WindowHandle {
         String windowHandleDegeri1= driver.getWindowHandle();
         System.out.println("ilk sayfanin window handle degeri: " + driver.getWindowHandle());
         driver.switchTo().newWindow(WindowType.WINDOW);//yeni bir pencere acilir
+
         driver.get("https://www.bestbuy.com");
         String windowHandleDegeri2= driver.getWindowHandle();
         System.out.println("yeni pencere window handle degeri; "+ driver.getWindowHandle());
