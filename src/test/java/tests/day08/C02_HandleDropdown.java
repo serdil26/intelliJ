@@ -36,15 +36,15 @@ public class C02_HandleDropdown {
         //3.ADIM> select objesini kullanarak select class'indan var olan 3 secim metodundan
         //istedgimizi kullanarak dropdown'da var olan option'lardan birini secebiliriz
         //secim yapmamiza yardim eden bu 3 metod VOID'dir dolayisiyla bize birsey dondurmezler
-        select.selectByIndex(3);
+        select.selectByIndex(1);
         //eger sectigimiz option degerini yazdirmak istersek
         System.out.println(select.getFirstSelectedOption().getText());
         Thread.sleep(3000);
 
-        select.selectByValue("search-alias=arts-crafts-intl-ship");
+        select.selectByValue("search-alias=music-intl-ship");
     Thread.sleep(3000);
 
-    select.selectByVisibleText("Beauty & Personal Care");
+    select.selectByVisibleText("Sports & Outdoors");
     Thread.sleep(3000);
 
     List<WebElement> optionList= select.getOptions();

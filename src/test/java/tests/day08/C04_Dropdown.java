@@ -8,10 +8,7 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
-import org.testng.annotations.BeforeMethod;
-import org.testng.annotations.Test;
+import org.testng.annotations.*;
 
 import java.time.Duration;
 import java.util.List;
@@ -55,7 +52,7 @@ public class C04_Dropdown {
         //-Test 2
         //	1. Kategori menusunden Books secenegini  secin
 
-        select.selectByVisibleText("Books");
+       select.selectByIndex(5);
         //	2. Arama kutusuna Java yazin ve aratin
         WebElement aramaKutusu = driver.findElement(By.xpath("//input[@id='twotabsearchtextbox']"));
 
@@ -69,4 +66,9 @@ public class C04_Dropdown {
 
         Assert.assertTrue(actualSonucSayisiYazisi.contains(arananKelime), "Arama sonucu Java icermiyor");
     }
+    @AfterMethod
+    public void tearDown(){
+        driver.close();
+    }
+
 }

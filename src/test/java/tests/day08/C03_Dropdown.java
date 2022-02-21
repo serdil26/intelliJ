@@ -51,8 +51,8 @@ public class C03_Dropdown {
         }
         //   5. Dropdown’un boyutunu bulun, Dropdown’da 4 öğe varsa konsolda True , degilse False yazdırın
 int actualSize= optionList.size();
-        int expectedSize=4;
-        Assert.assertEquals(actualSize, 4);
+        int expectedSize=3;
+        Assert.assertEquals(actualSize, 3);
 
     }
     @AfterMethod

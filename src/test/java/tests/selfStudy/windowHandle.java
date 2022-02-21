@@ -58,6 +58,9 @@ public class windowHandle extends TestBase {
         String secondWindow="";
         driver.findElement(By.xpath("//button[@id='messageWindowButton']")).click();
         Set<String> windowsValues=driver.getWindowHandles();
+        int count= windowsValues.size();
+        System.out.println(count);
+
         for (String each: windowsValues
         ) {
             if(!each.equals(firstWindow)){
@@ -65,6 +68,7 @@ public class windowHandle extends TestBase {
             }
 
         }
+
         driver.switchTo().window(secondWindow);
         Thread.sleep(3000);
         String actualText= driver.findElement(By.xpath("/html/body/text()")).getText();
